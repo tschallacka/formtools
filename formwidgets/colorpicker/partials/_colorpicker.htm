@@ -1,0 +1,19 @@
+<?php if ($this->previewMode): ?>
+
+    <div class="form-control" style="background-color:<?= $value ?>;" >
+        <?= $value ?>
+    </div>
+
+<?php else: ?>
+
+	<div class="tsch-colorpicker-container">
+        <input data-tsch-color-picker-tool
+            type="text"
+            id="<?= $this->getId('input') ?>"
+            name="<?= $name ?>"
+            value="<?= $value ?>"
+            class="form-control"
+            autocomplete="off" />
+    </div>
+
+<?php endif ?>

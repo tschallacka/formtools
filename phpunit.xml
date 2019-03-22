@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit 
+    bootstrap="./tests/bootstrap.php"
+    
+    convertWarningsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertErrorsToExceptions="true"
+    
+    backupStaticAttributes="false"
+    backupGlobals="false"
+    
+    processIsolation="false"
+    stopOnFailure="true"
+    syntaxCheck="false"
+    colors="true"
+>
+    <testsuites>
+        <testsuite name="Tschallacka.Formtools test suite">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
+    
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="CACHE_DRIVER" value="array"/>
+        <env name="SESSION_DRIVER" value="array"/>
+    </php>
+    
+</phpunit>

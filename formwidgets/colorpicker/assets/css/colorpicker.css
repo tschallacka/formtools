@@ -1,0 +1,10 @@
+ .tsch-colorpicker-container input[type="text"] {
+     display:none;
+ }
+ .tsch-colorpicker-container .sp-replacer {
+     width:100%;
+ }
+ .tsch-colorpicker-container .sp-preview {
+     width: calc(100% - 20px);
+     height:40px;
+ }
