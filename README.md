@@ -19,9 +19,9 @@ To run the PHPUnit tests browse to this directory and execute
   **usage**  
   `type: tsch_color_picker`
   
-* Filtered Checkbox List
-  Just like the original checkboxlist and the code is also based Octobers checkboxlist element.
-  It only adds a search functionality through the options and a way to hide unselected items or selected items.
-  **usage**
-  `type: tsch_filtered_checkboxlist`
+* Filtered Checkbox List  
+  Just like the original checkboxlist and the code is also based Octobers checkboxlist element.  
+  It only adds a search functionality through the options and a way to hide unselected items or selected items.  
+  **usage**  
+  `type: tsch_filtered_checkboxlist`  
   
