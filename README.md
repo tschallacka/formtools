@@ -15,5 +15,13 @@ To run the PHPUnit tests browse to this directory and execute
 
 * Colorpicker    
   A simple color picker that allows the selection of an RGBA color and that is  
-  stored in text format: rgba(164, 194, 244, 0.43)
+  stored in text format: rgba(164, 194, 244, 0.43)  
+  **usage**  
+  `type: tsch_color_picker`
+  
+* Filtered Checkbox List
+  Just like the original checkboxlist and the code is also based Octobers checkboxlist element.
+  It only adds a search functionality through the options and a way to hide unselected items or selected items.
+  **usage**
+  `type: tsch_filtered_checkboxlist`
   
