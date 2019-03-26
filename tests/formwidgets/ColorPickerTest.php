@@ -1,7 +1,6 @@
 <?php namespace Tschallacka\FormTools\Tests\FormWidgets;
 
-use Backend\Widgets\Form;
-use October\Rain\Database\Model;
+use Tschallacka\FormTools\Models\FormToolsDemo as Model;
 use Tschallacka\FormTools\Tests\PluginTestCase;
 use Backend\Classes\FormField;
 use Backend\Classes\Controller;
@@ -10,6 +9,9 @@ use Tschallacka\FormTools\FormWidgets\ColorPicker;
 class ColorPickerTest extends PluginTestCase
 {
     
+    /**
+     * Test wether all expected assets are loaded by the controller.
+     */
     public function testAssets() 
     {
         $formField = new FormField('color', 'color');
@@ -35,6 +37,7 @@ class ColorPickerTest extends PluginTestCase
         $found_count = 0;
         
         $files = ['css/colorpicker.css', 'css/spectrum.css', 'js/colorpicker.js', 'js/spectrum.js'];
+        $expected_count = count($files);
         
         $merged_files = array_merge($js, $css);
         
@@ -48,9 +51,12 @@ class ColorPickerTest extends PluginTestCase
             }
         }
         
-        $this->assertEquals(4, $found_count, 'Not all expected files were registered');
+        $this->assertEquals($expected_count, $found_count, 'Not all expected files were registered');
     }
     
+    /**
+     * Check wether all required rendering variables are set.
+     */
     public function testSettings()
     {
         $formField = new FormField('color', 'color');

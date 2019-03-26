@@ -7,4 +7,11 @@
  .tsch-colorpicker-container .sp-preview {
      width: calc(100% - 20px);
      height:40px;
+     border-width: 1.2px;
  }
+/**
+ * Fix weird transparancy bug in chrome
+ */
+ .sp-palette .sp-palette-row .sp-thumb-el {
+    border-width: 1.2px;
+}

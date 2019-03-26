@@ -3,7 +3,7 @@
 use Model;
 use ReflectionClass;
 use PluginTestCase as BasePluginTestCase;
-use Tschallacka\FormTools\Traits\ConsoleLoggerTrait;
+use Tschallacka\FormTools\Traits\ConsoleLoggerTrait; 
 
 
 abstract class PluginTestCase extends BasePluginTestCase

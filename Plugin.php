@@ -2,6 +2,8 @@
 
 use Backend;
 use System\Classes\PluginBase;
+use Tschallacka\FormTools\FormWidgets\ColorPicker;
+use Tschallacka\FormTools\FormWidgets\FilteredCheckboxList;
 
 /**
  * FormTools Plugin Information File
@@ -26,8 +28,8 @@ class Plugin extends PluginBase
     public function registerFormWidgets()
     {
     	return [
-    			'Tschallacka\FormTools\FormWidgets\ColorPicker' => 'tsch_color_picker',
-    			 
+    			ColorPicker::class => 'tsch_color_picker',
+    			FilteredCheckboxList::class => 'tsch_filtered_checkboxlist',
     	];
     }
 

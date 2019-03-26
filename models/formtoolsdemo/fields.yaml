@@ -1,0 +1,18 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: tschallacka.formtools::lang.demo_model.form_fields.name
+        span: left
+    
+    options:
+        label: tschallacka.formtools::lang.demo_model.form_fields.options
+        type: tsch_filtered_checkboxlist
+        span: right
+        
+    color:
+        label: tschallacka.formtools::lang.demo_model.form_fields.color
+        type: tsch_color_picker
+        span: left

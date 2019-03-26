@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Form Tools Demo
+
+# Model Form Field configuration
+form: $/tschallacka/formtools/models/formtoolsdemo/fields.yaml
+
+# Model Class name
+modelClass: Tschallacka\FormTools\Models\FormToolsDemo
+
+# Default redirect location
+defaultRedirect: tschallacka/formtools/formtoolsdemo
+
+# Create page
+create:
+    title: Create Form Tools Demo
+    redirect: tschallacka/formtools/formtoolsdemo/update/:id
+    redirectClose: tschallacka/formtools/formtoolsdemo
+
+# Update page
+update:
+    title: Edit Form Tools Demo
+    redirect: tschallacka/formtools/formtoolsdemo
+    redirectClose: tschallacka/formtools/formtoolsdemo
+
+# Preview page
+preview:
+    title: Preview Form Tools Demo

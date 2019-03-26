@@ -1,0 +1,112 @@
+<!-- Checkbox List -->
+<?php if (count($fieldOptions)): ?>
+
+    <div class="field-checkboxlist" data-checkbox-list-filter id="<?=$this->getId('wrapper')?>">
+
+        <?php if ($this->previewMode): ?>
+
+            <?php $index = 0; foreach ($fieldOptions as $value => $option): ?>
+                <?php
+                    $index++;
+                    $checkboxId = 'checkbox_'.$field->getId().'_'.$index;
+                    if (!in_array($value, $checkedValues)) continue;
+                    if (is_string($option)) $option = [$option];
+                ?>
+                <div class="checkbox custom-checkbox">
+                    <input
+                        type="checkbox"
+                        id="<?= $checkboxId ?>"
+                        name="<?= $field->getName() ?>[]"
+                        value="<?= $value ?>"
+                        disabled="disabled"
+                        checked="checked">
+
+                    <label for="<?= $checkboxId ?>">
+                        <?= e(trans($option[0])) ?>
+                    </label>
+                    <?php if (isset($option[1])): ?>
+                        <p class="help-block"><?= e(trans($option[1])) ?></p>
+                    <?php endif ?>
+                </div>
+            <?php endforeach ?>
+
+        <?php else: ?>
+
+            <!-- Quick selection -->
+            <div class="wrap-checkbox-filter-tools">
+            	<div class="selection-and-visbility-tools">
+                    <small>
+                        <?= e(trans('backend::lang.form.select')) ?>:
+                        <a href="javascript:;" data-field-checkboxlist-all><?= e(trans('backend::lang.form.select_all')) ?></a>,
+                        <a href="javascript:;" data-field-checkboxlist-none><?= e(trans('backend::lang.form.select_none')) ?></a>
+                    </small>
+                     | <?= e(trans('tschallacka.formtools::lang.filtered_checkbox_list.hide'))?>: 
+                     <small>                
+                        <a href="javascript:;" data-filtered-checkboxlist-hide-checked class="btn btn-primary btn-sm">
+                        	<i class="icon-check-square-o"></i> <?= e(trans('tschallacka.formtools::lang.filtered_checkbox_list.checked')) ?>(<span class="checkedcount">0</span>)
+                    	</a>
+                        <a href="javascript:;" data-filtered-checkboxlist-hide-unchecked  class="btn btn-primary btn-sm">
+                        	<i class="icon-square-o"></i> <?= e(trans('tschallacka.formtools::lang.filtered_checkbox_list.empty')) ?>(<span class="emptycount">0</span>)
+                    	</a>
+                        <a href="javascript:;" data-filtered-checkboxlist-show-all  class="btn btn-primary btn-sm">
+                        	<?= e(trans('tschallacka.formtools::lang.filtered_checkbox_list.none')) ?>
+                    	</a>
+                    </small>
+                </div>
+                <div class="search-input-wrap">
+                	<input placeholder="<?= e(trans('tschallacka.formtools::lang.filtered_checkbox_list.search_placeholder')) ?>" 
+                           type="text" 
+                           value="" 
+                           data-filter-text
+                           class="form-control icon search filtered-checkbox-list-search" 
+                           autocomplete="off">
+                </div>
+            </div>
+            <!-- Scrollable Checkbox list -->
+            <div class="field-checkboxlist-scrollable">
+                <div class="control-scrollbar" data-control="scrollbar">
+                    <input
+                        type="hidden"
+                        name="<?= $field->getName() ?>"
+                        value="0" />
+            
+                    <?php $index = 0; foreach ($fieldOptions as $value => $option): 
+                            $index++;
+                            $checkboxId = 'checkbox_'.$field->getId().'_'.$index;
+                            if (is_string($option)) $option = [$option];
+                        ?>
+                
+                		<div class="filter-element checkbox <?= $enabled_class ?>"> 
+                            <input
+                                type="checkbox" 
+                                id="<?= $checkboxId ?>"
+                                name="<?= $field->getName() ?>[]"
+                                value="<?= $value ?>"
+                                
+                                <?= $disabled_status ?>
+                                <?= in_array($value, $checkedValues) ? 'checked="checked"' : '' ?>
+                                >
+                    
+                            <label for="<?= $checkboxId ?>">
+                                <?= e(trans($option[0])) ?>
+                            </label>
+                            <?php if (isset($option[1])): ?>
+                                <p class="help-block"><?= e(trans($option[1])) ?></p>
+                            <?php endif ?>
+                		</div>
+            		<?php endforeach ?>
+            	</div>
+        	</div>
+            
+   		<?php endif ?>
+
+	</div>
+
+<?php else: ?>
+
+    <!-- No options specified -->
+    <?php if ($placeholder): ?>
+        <p><?= $placeholder ?></p>
+    <?php endif ?>
+
+<?php endif ?>

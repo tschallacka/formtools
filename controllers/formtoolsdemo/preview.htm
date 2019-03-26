@@ -1,0 +1,19 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><a href="<?= Backend::url('tschallacka/formtools/formtoolsdemo') ?>">Form Tools Demo</a></li>
+        <li><?= e($this->pageTitle) ?></li>
+    </ul>
+<?php Block::endPut() ?>
+
+<?php if (!$this->fatalError): ?>
+
+    <div class="form-preview">
+        <?= $this->formRenderPreview() ?>
+    </div>
+
+<?php else: ?>
+
+    <p class="flash-message static error"><?= e($this->fatalError) ?></p>
+    <p><a href="<?= Backend::url('tschallacka/formtools/formtoolsdemo') ?>" class="btn btn-default">Return to form tools demo list</a></p>
+
+<?php endif ?>

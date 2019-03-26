@@ -1,1 +1,6 @@
 1.0.1: First version of FormTools
+1.0.2:
+  - Adding filtered checkbox list and demo page for the form elements. see /backend/tschallacka/formtools/formtoolsdemo
+  - create_form_tools_demos_table.php
+  - seed_form_tools_demo_table.php
+  

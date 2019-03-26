@@ -1,0 +1,31 @@
+.wrap-checkbox-filter-tools {
+	width: 100%;
+	display: table;
+}
+
+.wrap-checkbox-filter-tools > .selection-and-visbility-tools,
+.wrap-checkbox-filter-tools > .search-input-wrap {
+	width: 60%;
+	display: table-cell;
+}
+
+.wrap-checkbox-filter-tools > .selection-and-visbility-tools .btn {
+	vertical-align: bottom;
+}
+
+.wrap-checkbox-filter-tools > .search-input-wrap {
+	width: 30%;
+}
+
+.filtered-checkbox-list-search {
+    height: 30px;
+    top: -4.5px;
+    vertical-align: bottom;
+}
+
+.field-checkboxlist-scrollable {
+	margin-top:0.1em;
+}
+
+
+ 
