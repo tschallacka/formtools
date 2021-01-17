@@ -19,7 +19,7 @@ class CreateFormToolsDemosTable extends Migration
             
             $table->string('name');
             $table->string('options')->nullable();
-            $table->string('color', 15)->nullable();
+            $table->text('color')->nullable();
         });
     }
 
